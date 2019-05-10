@@ -1,46 +1,63 @@
 package com.example.demo.post;
 
-public class Post{
-    private long id;
-    private String title;
-    private String url;
-    private String content;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-    public Post(long id, String title, String url, String content){
-        this.id =id;
-        this.title=title;
-        this.url=url;
-        this.content=content;
-    }
 
-    public long getId(){
-        return id;
-    }
+@Entity
+public class Post {
 
-    public String getTitle(){
-        return title;
-    }
+   @Id
+  @GeneratedValue
+   private Long id;
+   private String title;
+   private String url;
+   private String content;
 
-    public String getUrl(){
-        return url;
-    }
+   public Post(long id, String title, String url, String content) {
+   	this.id = id;
+   	this.title = title;
+   	this.url = url;
+   	this.content = content;
+   }
 
-    public String getContent(){
-        return content;
-    }
+   public Long getId() {
+   	return id;
+   }
 
-    public void setId(long id){
-        this.id = id;
-    }
-    public void setTitle(String title){
-    this.title =title;
-    }
+   public String getTitle() {
 
-    public void setUrl(String url){
-        this.url =url;
-    }
+   	return title;
+   }
 
-    public void setContent(String content){
-        this.content = content;
-    }
+   public String getUrl() {
+
+   	return url;
+   }
+
+   public String getContent() {
+
+   	return content;
+   }
+
+   public void setId(Long id) {
+
+   	this.id = id;
+   }
+
+   public void setTitle(String title) {
+
+   	this.title = title;
+          }
+
+   public void setUrl(String url) {
+
+   	this.url = url;
+   }
+
+   public void setContent(String content) {
+
+   	this.content = content;
+   }
 }
